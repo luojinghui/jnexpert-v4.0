@@ -30,7 +30,9 @@
 .form-box {
   .form-box(none);
   
-  
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.1px;
+  -moz-osx-font-smoothing: grayscale;
 }
 .tr {
   text-align: right;
@@ -49,8 +51,8 @@
   width: 502px;
 }
 
-.transition() {
-  transition: all ease .5s;
+.transition(@time: .5s) {
+  transition: all ease @time;
 }
 .input-text(@height: 40px, @width: 100%) {
   height: @height;
@@ -84,10 +86,50 @@
 .select-province, .select-city {
   .select(104px, 38px)
 }
+.expert-img-box {
+  width: 100px;
+  height: 100px;
+  
+  border: 1px solid #dbd9d8;
+  border-radius: 666px;
+  background-image: none;
+  
+  img {
+    background-color: #fcfaf8;
+    border-radius: 666px;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+}
 
+.expert-page-box {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #dbd9d8;
+  
+  background-image: none;
+  img {
+    background-color: #fcfaf8;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .i-btn-upload {
   .i-btn(90px, 42px, @red, none , 0px, @withe);
+  
+  [type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 42px;
+    width: 90px;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none;
+  }
 }
 .upload-info {
   position: absolute;
@@ -100,6 +142,146 @@
   }
 }
 
+.i-btn-next {
+  .i-btn(180px, 50px, @red, none, 66px, @withe);
+}
+.i-btn-up {
+  .i-btn(180px, 50px, @form-bg, 1px solid @border, 66px, #2c3035);
+}
+.font-num-tips {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 12px;
+  //color: rgba(21, 23, 24, 0.5);
+  color: #a9a9a9;
+}
+
+.i-btn-add {
+  .i-btn(116px, 42px, #fcfaf8, 1px solid @border, 0px, @red);
+}
+.i-btn-save {
+  .i-btn(180px, 50px, @red, none, 66px, @withe);
+}
+.save-field {
+  position: absolute;
+  bottom: 50px;
+  right: 110px;
+}
+.field {
+  display: inline-block;
+  margin: 0px 10px 10px 0;
+}
+
+#field-model {
+  //display: block!important;
+}
+.field-box {
+  width: 600px;
+  height: 640px;
+  background-color: @withe;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.left-field {
+  float: left;
+  width: 200px;
+  height: 640px;
+  background-color: #fcfaf8;
+  padding: 50px 0;
+}
+
+.field-li {
+  line-height: 40px;
+  cursor: pointer;
+  padding-left: 30px;
+  border-left: 4px solid transparent;
+  &:hover {
+    border-left: 4px solid #f65131;
+    color: #f65131;
+    background-color: #fff;
+  }
+  &:hover .hide-field-list {
+    display: block;
+  }
+}
+
+.field-li.on {
+  border-left: 4px solid #f65131;
+  color: #f65131;
+  background-color: #fff;
+  .hide-field-list {
+    display: block;
+  }
+}
+.hide-field-list {
+  position: absolute;
+  left: 196px;
+  top: 0;
+  width: 400px;
+  max-height: 500px;
+  overflow-y: auto;
+  
+  display: none;
+}
+.hide-field-list {
+  color: #2c3035;
+}
+.hide-field {
+  padding: 5px 10px;
+  margin: 0px 20px 0px 20px;
+  word-wrap: break-word;
+  white-space: pre;
+  cursor: pointer;
+  border: 1px solid transparent;
+  &:hover {
+    color: #f65131;
+  }
+  &.on {
+    border: 1px solid #f65131;
+    border-radius: 88px;
+    color: #f65131;
+  }
+}
+
+.flex-box-mini {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.f-l-info {
+  width: 96px;
+  text-align: right;
+  padding-right: 10px;
+}
+.company {
+  border: 1px solid #e2dfde;
+  padding: 15px 24px 0px 0;
+  margin-bottom: 15px;
+}
+.company-i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: .7;
+  .transition(.5s);
+  &:hover {
+    opacity: 1;
+    color: #f65131;
+  }
+}
+.add-company {
+  position: absolute;
+  bottom: -5px;
+  right: 0px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 
 //btn start 参数: @width, @height, @bg, @border, @radius, @color
@@ -114,10 +296,12 @@
   cursor: pointer;
   border: @border;
   opacity: .8;
+  display: inline-block;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  .transition(.2s);
   &:hover {
     opacity: 1;
   }
@@ -148,7 +332,25 @@
   -ms-transform: scale(1);
   transform: scale(1);
 }
-
+.i-btn-loading-next:after {
+  .i-btn-loading(54px, 55px);
+}
+.i-btn-loading(@width: 46px, @height: 47px) {
+  content: "\e60a";
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  
+  display: inline-block;
+  width: @width;
+  height: @height;
+  -webkit-animation: loading 1.5s infinite ease;
+  -moz-animation: loading 1.5s infinite ease;
+  animation: loading 1.5s infinite ease;
+}
 .i-btn-loading:after {
   content: "\e60a";
   font-family: "iconfont" !important;
