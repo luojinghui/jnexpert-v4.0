@@ -46,20 +46,20 @@
                             <i class="iconfont icon-down icon-down-posi"></i>
                             <ul class="own-list name-fadeIn">
                                 <li>
-                                    <a href="" class="transition2">我的订单</a>
+                                    <a href="" class="">我的订单</a>
                                 </li>
                                 <li>
-                                    <a href="" class="transition2">消息中心</a>
+                                    <a href="" class="">消息中心</a>
                                     <i class="h-message-num"></i>
                                 </li>
                                 <li>
-                                    <a href="" class="transition2">我的收藏</a>
+                                    <a href="" class="">我的收藏</a>
                                 </li>
                                 <li>
-                                    <a href="" class="transition2">个人设置</a>
+                                    <a href="" class="">个人设置</a>
                                 </li>
                                 <li>
-                                    <a href="" class="transition2">退出</a>
+                                    <a href="" class="">退出</a>
                                 </li>
                             </ul>
                         </li>
@@ -109,7 +109,7 @@
                         </div>
                     </div>
 
-                    <!--真是姓名 box start-->
+                    <!--真实姓名 box start-->
                     <div class="line-box clearfix">
                         <div class="left-input-title">
                             <span class="pos-rel"><span class="red must">*</span>真实姓名</span>
@@ -123,7 +123,7 @@
                     </div>
                     <!--真实姓名 box end-->
 
-                    <!--上传照片 box start-->
+                    <!--个人头像 box start-->
                     <div class="line-box clearfix">
                         <div class="left-input-title">
                             <span class="pos-rel"><span class="red must">*</span>个人头像</span>
@@ -131,7 +131,9 @@
                         <div class="input-box right-input-content">
                             <div class="pos-rel">
                                 <!--upload btn start status -->
-                                <div class="i-btn-upload">上传照片</div>
+                                <div class="i-btn-upload pos-rel">上传照片
+                                    <input type="file" id="upload-1" onchange='PreviewImage(this, "expert-img-preview", "expert-img-preview-box", "please-upload-right-e-img")'>
+                                </div>
                                 <!--upload btn start status end-->
 
                                 <!--upload btn uploading status-->
@@ -140,13 +142,25 @@
 
                                 <div class="upload-info">
                                     <p>支持jpg/gif/png格式,RGB模式,(长<150,宽<150,大小<10mb)</p>
-                                    <p>上传图片为专家页上方背景图</p>
+                                    <p>上传图片为专家头像</p>
                                 </div>
                             </div>
-                            <div class="input-info">请上传头像</div>
+                            <div class="input-info" id="please-upload-e-img">请上传头像!</div>
+                            <div class="input-info" id="please-upload-right-e-img">请上传正确的图片文件!</div>
                         </div>
                     </div>
-                    <!--上传照片 box end-->
+                    <!--个人头像 box end-->
+
+                    <!--个人头像预览 box start-->
+                    <div class="line-box clearfix none" id="expert-img-preview-box">
+                        <div class="left-input-title"></div>
+                        <div class="input-box right-input-content">
+                            <div class="expert-img-box">
+                                <img src="" alt="" id="expert-img-preview">
+                            </div>
+                        </div>
+                    </div>
+                    <!--个人头像预览 box end-->
 
                     <!--手机号码 box start-->
                     <div class="line-box clearfix">
@@ -219,7 +233,7 @@
                                     </select>
                                 </div>
                                 <div class="select-city">
-                                    <select name="" id="2" disabled>
+                                    <select name="" id="2">
                                         <option value="123">西安</option>
                                         <option value="234">重庆</option>
                                         <option value="345">北京</option>
@@ -238,12 +252,60 @@
                         </div>
                         <div class="input-box right-input-content">
                             <div>
-                                <textarea class="i-t-area"></textarea>
+                                <textarea class="i-t-area" placeholder="例如：30年营销策划经验，20年企业管理经验"></textarea>
                             </div>
-                            <div class="input-info">请输入正确的经验概述</div>
+                            <div class="input-info">请输入经验概述</div>
                         </div>
                     </div>
                     <!--经验概述 box end-->
+
+                    <!--专家页封面 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel">专家页封面</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div class="pos-rel">
+                                <!--upload btn start status -->
+                                <div class="i-btn-upload pos-rel">上传照片
+                                    <input type="file" id="upload-2" onchange='PreviewImage(this, "expert-img-preview-2", "expert-img-preview-box-2", "please-upload-right-e-img-2")'>
+                                </div>
+                                <!--upload btn start status end-->
+
+                                <!--upload btn uploading status-->
+                                <!--<div class="i-btn-upload i-btn-disabled i-btn-loading"></div>-->
+                                <!--upload btn uploading status end-->
+
+                                <div class="upload-info">
+                                    <p>支持jpg/gif/png格式,RGB模式,(长<150,宽<150,大小<10mb)</p>
+                                    <p>上传图片为专家页上方背景图</p>
+                                </div>
+                                <div class="input-info" id="please-upload-right-e-img-2">请上传正确的图片文件</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--专家页封面 box end-->
+
+                    <!--专家页封面预览 box start-->
+                    <div class="line-box clearfix expert-page-bg none" id="expert-img-preview-box-2">
+                        <div class="left-input-title"></div>
+                        <div class="input-box right-input-content">
+                            <div class="expert-page-box">
+                                <img src="" alt="" id="expert-img-preview-2">
+                            </div>
+                        </div>
+                    </div>
+                    <!--专家页封面预览 box end-->
+
+                    <!--下一步 box start-->
+                    <div class="line-box clearfix mt-30">
+                        <div class="left-input-title"></div>
+                        <div class="input-box right-input-content">
+                            <div class="i-btn-next">下一步</div>
+                            <!--<div class="i-btn-next i-btn-disabled i-btn-loading-next"></div>-->
+                        </div>
+                    </div>
+                    <!--下一步 box end-->
                 </div>
             </div>
         </div>
@@ -294,9 +356,91 @@
         </div>
     </div>
     <!--footer end-->
+
+    <!--model login start-->
+    <div class="model fadeIn">
+        <div class="flex-box">
+            <div class="model-box model-login model-fadeIn">
+                <div class="login-box">
+                    <div class="model-title">
+                        <i class="iconfont icon-chacha model-close-i"></i>
+                    </div>
+                    <div class="model-content">
+                        <div class="logo-box-out">
+                            <div class="logo-box-in">
+                                <div class="model-logo">
+                                    <img src="../img/login/logo3.png" alt="jnexpert">
+                                </div>
+                                <div class="model-line">
+                                    <span>使用手机号登录</span>
+                                </div>
+                                <form>
+                                    <div class="input-box">
+                                        <input type="text" class="input-text transition2" placeholder="输入手机号">
+                                        <div class="input-info input-phone">请输入正确的11位手机号码</div>
+                                    </div>
+                                    <div class="input-box">
+                                        <input type="password" class="input-text transition2" placeholder="输入密码">
+                                        <div class="input-info input-password">账号或密码错误</div>
+                                    </div>
+
+                                    <!--正常登陆按钮 start-->
+                                    <div class="i-btn transition2">登陆</div>
+                                    <!--正常登陆按钮 end-->
+
+                                    <!--登陆禁止点击状态 加i-btn-disabled class start-->
+                                    <!--<div class="i-btn i-btn-disabled">登陆</div>-->
+                                    <!--登陆禁止点击状态 end -->
+
+                                    <!--登陆请求时显示状态 加i-btn-disabled & i-btn-loading class start-->
+                                    <!--<div class="i-btn i-btn-disabled i-btn-loading"></div>-->
+                                    <!--登陆请求时显示状态 end-->
+
+                                    <div class="input-down clearfix">
+                                        <div class="left-pass">
+                                            <a href="" class="i-red">忘记密码</a>
+                                        </div>
+                                        <div class="right-go-reg">
+                                            <span>没有账号?</span>
+                                            <a href="" class="i-red">去注册</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--model login end-->
 </div>
 </body>
 <script>
+function PreviewImage(imgFile, previewEle, previewEleBox, tip) {
+    var imgObjPreview = document.getElementById(previewEle);
+    var imgObjPreviewBox =document.getElementById(previewEleBox);
+    var tips = document.getElementById(tip);
 
+    var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+    filextension=filextension.toLowerCase();
+
+    if ((filextension !== '.jpg')&&
+            (filextension !== '.gif')&&
+            (filextension !== '.jpeg')&&
+            (filextension !== '.png')) {
+        tips.style.display = "block";
+        imgFile.value = "";
+    } else {
+        tips.style.display = "none";
+
+        var path = window.URL.createObjectURL(imgFile.files[0]);
+
+        imgObjPreviewBox.style.display = 'block';
+        imgObjPreview.src = path;
+
+        imgFile.value = "";
+    }
+}
 </script>
 </html>
