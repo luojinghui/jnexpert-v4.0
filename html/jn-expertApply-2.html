@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v4-expertApply-2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/register.css">
+<link rel="stylesheet" href="../css/form.css">
+<style>
+</style>
+<body class="home">
+<div class="app">
+    <!-- header start -->
+    <div class="header">
+        <div class="container pos-rel">
+            <div class="h-box">
+                <div class="logo">
+                    <img src="../img/index/logo.png" alt="锦囊专家">
+                </div>
+                <div class="nav">
+                    <ul class="h-nav-list">
+                        <li class="nav-li nav-active">
+                            <a href="jn-index.html">首页</a>
+                        </li>
+                        <li class="nav-li">
+                            <a>微课</a>
+                        </li>
+                        <li class="nav-li">
+                            <a>献计</a>
+                        </li>
+                        <li class="nav-li">
+                            <a class="login" onclick="openModel('login-model')">登陆</a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="jn-register.html">注册</a>
+                        </li>
+                        <li class="nav-li nav-li-own">
+                            <a href="" class="h-name overflow">周丹丹</a>
+                            <i class="iconfont icon-down icon-down-posi"></i>
+                            <ul class="own-list name-fadeIn">
+                                <li>
+                                    <a href="" class="">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="" class="">消息中心</a>
+                                    <i class="h-message-num"></i>
+                                </li>
+                                <li>
+                                    <a href="" class="">我的收藏</a>
+                                </li>
+                                <li>
+                                    <a href="" class="">个人设置</a>
+                                </li>
+                                <li>
+                                    <a href="" class="">退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-li">
+                            <a>成为专家</a>
+                        </li>
+                        <li class="search">
+                            <i class="icon iconfont icon-search"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <div class="mt-116">
+        <!-- 表单注册头部进度导航 start -->
+        <div class="container mt-bg mt-radius">
+            <div class="form-step">
+                <span>
+                    <span class="form-step-t">完善基本信息</span>
+                    <i class="iconfont icon-right1 form-step-i"></i>
+                </span>
+                <span class="red">
+                    <span class="form-step-t">完善个人介绍</span>
+                    <i class="iconfont icon-right1 form-step-i"></i>
+                </span>
+                <span>发布培训或服务</span>
+            </div>
+        </div>
+        <!-- 表单注册头部进度导航 end -->
+
+        <!--表单注册第2步 start-->
+        <div class="container mt-bg mt-radius mt-30">
+            <div class="form-box">
+                <div class="form-ele">
+                    <div class="line-box clearfix">
+                        <div class="left-input-title"></div>
+                        <div class="input-box right-input-content">
+                            <p class="tr">
+                                <span class="pos-rel">
+                                    <span class="red must">*</span>
+                                    为必填项
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--专家风采 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>专家风采</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div class="pos-rel">
+                                <!--upload btn start status -->
+                                <div class="i-btn-upload pos-rel">上传照片
+                                    <input type="file" id="upload-1" onchange='PreviewImage(this, "expert-img-preview", "expert-img-preview-box", "please-upload-right-e-img")'>
+                                </div>
+                                <!--upload btn start status end-->
+
+                                <!--upload btn uploading status-->
+                                <!--<div class="i-btn-upload i-btn-disabled i-btn-loading"></div>-->
+                                <!--upload btn uploading status end-->
+
+                                <div class="upload-info">
+                                    <p>支持jpg/gif/png格式,RGB模式,(长<150,宽<150,大小<10mb)</p>
+                                    <p>上传图片为专家头像</p>
+                                </div>
+                            </div>
+                            <div class="input-info" id="please-upload-e-img">请上传头像!</div>
+                            <div class="input-info" id="please-upload-right-e-img">请上传正确的图片文件!</div>
+                        </div>
+                    </div>
+                    <!--专家风采 box end-->
+
+                    <!--专家风采预览 box start-->
+                    <div class="line-box clearfix none" id="expert-img-preview-box">
+                        <div class="left-input-title"></div>
+                        <div class="input-box right-input-content">
+                            <div class="expert-img-box">
+                                <img src="" alt="" id="expert-img-preview">
+                            </div>
+                        </div>
+                    </div>
+                    <!--专家风采预览 box end-->
+
+                    <!--个人简介 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>个人简介</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <textarea class="i-t-area" placeholder="请描述您从事过的工作,经手过哪些项目,接触过哪些领域......" onkeyup="textNumListener(this, 'font-num-tips', 'peo-intro')"></textarea>
+                            </div>
+                            <span class="font-num-tips">0/500</span>
+                            <div class="input-info" id="peo-intro">请输入正确的个人简介</div>
+                        </div>
+                    </div>
+                    <!--个人简介 box end-->
+
+                    <!--擅长领域 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>擅长领域</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <div class="field-boxes inline">
+                                    <span class="field">大数据</span>
+                                    <span class="field">互联网+</span>
+                                    <span class="field">精益创业</span>
+                                </div>
+                                <div class="i-btn-add" onclick="openFieldModel('field-model')">
+                                    <!--<i class="iconfont icon-jia"></i>-->
+                                    添加/编辑领域
+                                </div>
+                            </div>
+                            <div class="input-info">请选择正确的擅长领域</div>
+                        </div>
+                    </div>
+                    <!--擅长领域 box end-->
+
+                    <!--擅长行业 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>擅长行业</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <div class="field-boxes inline">
+                                    <span class="field">大数据</span>
+                                    <span class="field">互联网+</span>
+                                    <span class="field">精益创业</span>
+                                </div>
+                                <div class="i-btn-add" onclick="openFieldModel('field-model')">
+                                    <!--<i class="iconfont icon-jia"></i>-->
+                                    添加/编辑行业
+                                </div>
+                            </div>
+                            <div class="input-info">请选择正确的擅长行业</div>
+                        </div>
+                    </div>
+                    <!--擅长行业 box end-->
+
+                    <!--曾任职公司 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>曾任职公司</span>
+                        </div>
+                        <div class="input-box right-input-content pos-rel">
+                            <span class="red add-company">添加</span>
+                            <div class="company-box company pos-rel">
+                                <i class="iconfont icon-chacha company-i"></i>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">公司名称</span>
+                                    <input type="text" class="input-text i-t" placeholder="公司名称">
+                                </div>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">职位/头衔</span>
+                                    <input type="text" class="input-text i-t" placeholder="职位/头衔">
+                                </div>
+                            </div>
+                            <div class="company-box company pos-rel">
+                                <i class="iconfont icon-chacha company-i"></i>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">公司名称</span>
+                                    <input type="text" class="input-text i-t" placeholder="公司名称">
+                                </div>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">职位/头衔</span>
+                                    <input type="text" class="input-text i-t" placeholder="职位/头衔">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--曾任职公司 box end-->
+
+                    <!--项目经验 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>项目经验</span>
+                        </div>
+                        <div class="input-box right-input-content pos-rel">
+                            <span class="red add-company">添加</span>
+                            <div class="company-box company pos-rel">
+                                <i class="iconfont icon-chacha company-i"></i>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">项目名称</span>
+                                    <input type="text" class="input-text i-t" placeholder="项目名称">
+                                </div>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">项目简介</span>
+                                    <textarea class="i-t-area" placeholder="项目简介"></textarea>
+                                </div>
+                            </div>
+                            <div class="company-box company pos-rel">
+                                <i class="iconfont icon-chacha company-i"></i>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">项目名称</span>
+                                    <input type="text" class="input-text i-t" placeholder="项目名称">
+                                </div>
+                                <div class="flex-box-mini">
+                                    <span class="f-l-info">项目简介</span>
+                                    <textarea class="i-t-area" placeholder="项目简介"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--项目经验 box end-->
+
+                    <!--下一步 box start-->
+                    <div class="line-box clearfix mt-30">
+                        <div class="left-input-title"></div>
+                        <div class="input-box right-input-content">
+                            <div class="i-btn-up">上一步</div>
+                            <div class="i-btn-next">下一步</div>
+                            <!--<div class="i-btn-next i-btn-disabled i-btn-loading-next"></div>-->
+                        </div>
+                    </div>
+                    <!--下一步 box end-->
+                </div>
+            </div>
+        </div>
+        <!--表单注册第2步 end-->
+    </div>
+
+    <!--footer start-->
+    <div class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <div class="left-logo">
+                    <div class="footer-logo">
+                        <img src="../img/index/logo2.png" alt="锦囊专家">
+                    </div>
+                    <ul class="footer-left">
+                        <li class="f-four"><a href="">首页</a></li>
+                        <li class="f-four"><a href="">下载中心</a></li>
+                        <li class="f-four"><a href="">成功案例</a></li>
+                        <li class="f-four"><a href="">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="right-phone">
+                    <dl class="f-phone">
+                        <dt>联系我们</dt>
+                        <dd class="f-mb">
+                            <i class="iconfont icon-mail"></i>
+                            <a href="mailto:JNexpert@gmail.com">JNexpert@gmail.com</a>
+                        </dd>
+                        <dd>
+                            <i class="iconfont icon-phone"></i>010-89839968
+                        </dd>
+                    </dl>
+                    <dl class="f-phone">
+                        <dt>关注我们</dt>
+                        <dd class="f-mb">
+                            <span class="f-weibo-f">新浪微博: </span><i class="iconfont icon-weibo f-weibo"></i>
+                        </dd>
+                        <dd>
+                            公众号: JNexpert
+                        </dd>
+                    </dl>
+                    <dl class="f-code">
+                        <img src="../img/index/code.png" alt="" class="jn-code">
+                    </dl>
+                </div>
+            </div>
+            <p class="version">北京捷恩旭技术咨询有限公司 Copyright © 2016 | 京ICP备15002655号</p>
+        </div>
+    </div>
+    <!--footer end-->
+
+    <!--model login start-->
+    <div class="model fadeIn" id="login-model">
+        <div class="flex-box">
+            <div class="model-box model-login model-fadeIn">
+                <div class="login-box">
+                    <div class="model-title">
+                        <i class="iconfont icon-chacha model-close-i" onclick="closeModel('login-model')"></i>
+                    </div>
+                    <div class="model-content">
+                        <div class="logo-box-out">
+                            <div class="logo-box-in">
+                                <div class="model-logo">
+                                    <img src="../img/login/logo3.png" alt="jnexpert">
+                                </div>
+                                <div class="model-line">
+                                    <span>使用手机号登录</span>
+                                </div>
+                                <form>
+                                    <div class="input-box">
+                                        <input type="text" class="input-text transition2" placeholder="输入手机号">
+                                        <div class="input-info input-phone">请输入正确的11位手机号码</div>
+                                    </div>
+                                    <div class="input-box">
+                                        <input type="password" class="input-text transition2" placeholder="输入密码">
+                                        <div class="input-info input-password">账号或密码错误</div>
+                                    </div>
+
+                                    <!--正常登陆按钮 start-->
+                                    <div class="i-btn transition2">登陆</div>
+                                    <!--正常登陆按钮 end-->
+
+                                    <!--登陆禁止点击状态 加i-btn-disabled class start-->
+                                    <!--<div class="i-btn i-btn-disabled">登陆</div>-->
+                                    <!--登陆禁止点击状态 end -->
+
+                                    <!--登陆请求时显示状态 加i-btn-disabled & i-btn-loading class start-->
+                                    <!--<div class="i-btn i-btn-disabled i-btn-loading"></div>-->
+                                    <!--登陆请求时显示状态 end-->
+
+                                    <div class="input-down clearfix">
+                                        <div class="left-pass">
+                                            <a href="" class="i-red">忘记密码</a>
+                                        </div>
+                                        <div class="right-go-reg">
+                                            <span>没有账号?</span>
+                                            <a href="" class="i-red">去注册</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--model login end-->
+
+    <!--model select field start-->
+    <div class="model fadeIn" id="field-model">
+        <div class="flex-box">
+            <div class="model-box model-fadeIn pos-rel">
+                <div class="field-box">
+                    <div class="model-title">
+                        <i class="iconfont icon-chacha model-close-i" onclick=closeFieldModel('field-model')></i>
+                    </div>
+                    <div class="model-content">
+                        <div class="left-field">
+                            <ul class="field-ul pos-rel">
+                                <li class="field-li">
+                                    <span class="field-title">传统企业+互联网</span>
+                                    <div class="hide-field-list">
+                                        <span class="hide-field">智能家电</span>
+                                        <span class="hide-field">设计创业</span>
+                                        <span class="hide-field">LBS营销</span>
+                                        <span class="hide-field">多点触控</span>
+                                        <span class="hide-field">建筑行业</span>
+                                        <span class="hide-field">大数据</span>
+                                    </div>
+                                </li>
+                                <li class="field-li">
+                                    <span class="field-title">互联网产品与技术</span>
+                                    <div class="hide-field-list">
+                                        <span class="hide-field">手势操作</span>
+                                        <span class="hide-field">二次元电商</span>
+                                        <span class="hide-field">校园电商</span>
+                                        <span class="hide-field">卧室定位</span>
+                                        <span class="hide-field">建筑行业</span>
+                                        <span class="hide-field">流程管理</span>
+                                        <span class="hide-field">手势操作</span>
+                                        <span class="hide-field">二次元电商</span>
+                                        <span class="hide-field">校园电商</span>
+                                        <span class="hide-field">卧室定位</span>
+                                    </div>
+                                </li>
+                                <li class="field-li">
+                                    <span class="field-title">职业规划与HR管理</span>
+                                    <div class="hide-field-list">
+                                        <span class="hide-field">智能家电</span>
+                                        <span class="hide-field">设计创业</span>
+                                        <span class="hide-field">LBS营销</span>
+                                        <span class="hide-field">多点触控</span>
+                                        <span class="hide-field">建筑行业</span>
+                                        <span class="hide-field">流程管理</span>
+                                        <span class="hide-field">手势操作</span>
+                                        <span class="hide-field">二次元电商</span>
+                                    </div>
+                                </li>
+                                <li class="field-li">
+                                    <span class="fielf-title">流程管理和信息化</span>
+                                    <div class="hide-field-list">
+                                        <span class="hide-field">手势操作</span>
+                                        <span class="hide-field">二次元电商</span>
+                                        <span class="hide-field">校园电商</span>
+                                        <span class="hide-field">卧室定位</span>
+                                        <span class="hide-field">LBS营销</span>
+                                        <span class="hide-field">多点触控</span>
+                                        <span class="hide-field">建筑行业</span>
+                                        <span class="hide-field">流程管理</span>
+                                        <span class="hide-field">二次元电商</span>
+                                        <span class="hide-field">校园电商</span>
+                                        <span class="hide-field">卧室定位</span>
+                                        <span class="hide-field">手势操作</span>
+                                        <span class="hide-field">二次元电商</span>
+                                        <span class="hide-field">校园电商</span>
+                                        <span class="hide-field">卧室定位</span>
+                                        <span class="hide-field">建筑行业</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="i-btn-save save-field">保存</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--model select field end-->
+</div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+
+
+    function closeFieldModel(loginModel) {
+        var model = document.getElementById(loginModel);
+
+        model.style.display = "none";
+    }
+
+    function openFieldModel(openModel) {
+        document.getElementById(openModel).style.display = "block";
+//        document.getElementsByClassName('field-li')[0].className = "field-li on";
+
+        var hide_field = document.getElementsByClassName('hide-field');
+
+        [].forEach.call(hide_field, function(value) {
+            value.addEventListener('click', function() {
+                if(hasClass(this, 'on')) {
+                    removeClass(this, 'on');
+                } else {
+                    addClass(this, 'on');
+                }
+            })
+        })
+
+    }
+
+//    function hoverFieldLi() {
+//        var field_li = document.getElementsByClassName('field-li');
+//
+//        [].forEach.call(hide_field, function(value) {
+//            value.addEventListener('mouseover', function() {})
+//        })
+//    }
+
+    function PreviewImage(imgFile, previewEle, previewEleBox, tip) {
+        var imgObjPreview = document.getElementById(previewEle);
+        var imgObjPreviewBox =document.getElementById(previewEleBox);
+        var tips = document.getElementById(tip);
+
+        var filextension=imgFile.value.substring(imgFile.value.lastIndexOf("."),imgFile.value.length);
+        filextension=filextension.toLowerCase();
+
+        if ((filextension !== '.jpg')&&
+                (filextension !== '.gif')&&
+                (filextension !== '.jpeg')&&
+                (filextension !== '.png')) {
+            tips.style.display = "block";
+            imgFile.value = "";
+        } else {
+            tips.style.display = "none";
+
+            var path = window.URL.createObjectURL(imgFile.files[0]);
+
+            imgObjPreviewBox.style.display = 'block';
+            imgObjPreview.src = path;
+
+            imgFile.value = "";
+        }
+    }
+
+    /**
+     * textEle 是当前输入对象
+     * tipsEle 是文本字数提示className
+     * tipsEle2 是tip信息的id值
+     */
+    function textNumListener(textEle, tipsEle, tipsEle2) {
+        var tipEle = document.getElementsByClassName(tipsEle)[0];
+        var tipEle2 = document.getElementById(tipsEle2);
+
+        if(textEle.value.length <= 500) {
+            tipEle.innerHTML = textEle.value.length + "/500";
+            tipEle2.style.display = 'none';
+            tipEle.style.cssText = 'color: #a9a9a9';
+        } else {
+            tipEle.innerHTML = textEle.value.length + "/500";
+            tipEle.style.cssText = 'color: #f65131';
+            tipEle2.style.cssText = 'display: block';
+        }
+
+    }
+</script>
+</html>
