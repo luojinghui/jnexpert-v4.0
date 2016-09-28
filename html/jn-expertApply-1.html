@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v4-expertApply-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/register.css">
+<link rel="stylesheet" href="../css/form.css">
+<style>
+</style>
+<body class="home">
+<div class="app">
+    <!-- header start -->
+    <div class="header">
+        <div class="container pos-rel">
+            <div class="h-box">
+                <div class="logo">
+                    <img src="../img/index/logo.png" alt="锦囊专家">
+                </div>
+                <div class="nav">
+                    <ul class="h-nav-list">
+                        <li class="nav-li nav-active">
+                            <a href="jn-index.html">首页</a>
+                        </li>
+                        <li class="nav-li">
+                            <a>微课</a>
+                        </li>
+                        <li class="nav-li">
+                            <a>献计</a>
+                        </li>
+                        <li class="nav-li">
+                            <a class="login">登陆</a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="jn-register.html">注册</a>
+                        </li>
+                        <li class="nav-li nav-li-own">
+                            <a href="" class="h-name overflow">周丹丹</a>
+                            <i class="iconfont icon-down icon-down-posi"></i>
+                            <ul class="own-list name-fadeIn">
+                                <li>
+                                    <a href="" class="transition2">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">消息中心</a>
+                                    <i class="h-message-num"></i>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">我的收藏</a>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">个人设置</a>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-li">
+                            <a>成为专家</a>
+                        </li>
+                        <li class="search">
+                            <i class="icon iconfont icon-search"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <div class="mt-116">
+        <!-- 表单注册头部进度导航 start -->
+        <div class="container mt-bg mt-radius">
+            <div class="form-step">
+                <span class="red">
+                    <span class="form-step-t">完善基本信息</span>
+                    <i class="iconfont icon-right1 form-step-i"></i>
+                </span>
+                <span>
+                    <span class="form-step-t">完善个人介绍</span>
+                    <i class="iconfont icon-right1 form-step-i"></i>
+                </span>
+               <span>发布培训或服务</span>
+            </div>
+        </div>
+        <!-- 表单注册头部进度导航 end -->
+
+        <!--表单注册第一步 start-->
+        <div class="container mt-bg mt-radius mt-30">
+            <div class="form-box">
+                <div class="form-ele">
+                    <div class="line-box clearfix">
+                        <div class="left-input-title"></div>
+                        <div class="input-box right-input-content">
+                            <p class="tr">
+                                <span class="pos-rel">
+                                    <span class="red must">*</span>
+                                    为必填项
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--真是姓名 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>真实姓名</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <input type="text" class="i-t" placeholder="输入姓名">
+                            </div>
+                            <div class="input-info">请输入正确的姓名</div>
+                        </div>
+                    </div>
+                    <!--真实姓名 box end-->
+
+                    <!--上传照片 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>个人头像</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div class="pos-rel">
+                                <!--upload btn start status -->
+                                <div class="i-btn-upload">上传照片</div>
+                                <!--upload btn start status end-->
+
+                                <!--upload btn uploading status-->
+                                <!--<div class="i-btn-upload i-btn-disabled i-btn-loading"></div>-->
+                                <!--upload btn uploading status end-->
+
+                                <div class="upload-info">
+                                    <p>支持jpg/gif/png格式,RGB模式,(长<150,宽<150,大小<10mb)</p>
+                                    <p>上传图片为专家页上方背景图</p>
+                                </div>
+                            </div>
+                            <div class="input-info">请上传头像</div>
+                        </div>
+                    </div>
+                    <!--上传照片 box end-->
+
+                    <!--手机号码 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>手机号码</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <input type="text" class="i-t" placeholder="输入手机号码">
+                            </div>
+                            <div class="input-info">请输入正确的手机号码</div>
+                        </div>
+                    </div>
+                    <!--手机号码 box end-->
+
+                    <!--公司名称 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>公司名称</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <input type="text" class="i-t" placeholder="输入公司名称">
+                            </div>
+                            <div class="input-info">请输入正确的公司名称</div>
+                        </div>
+                    </div>
+                    <!--手机号码 box end-->
+
+                    <!--任职机构职位 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>任职机构职位</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <input type="text" class="i-t" placeholder="如: 某某公司,自由职位">
+                            </div>
+                            <div class="input-info">请输入正确的任职机构职位</div>
+                        </div>
+                    </div>
+                    <!--任职机构职位 box end-->
+
+                    <!--邮箱 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>邮箱</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <input type="text" class="i-t" placeholder="输入邮箱">
+                            </div>
+                            <div class="input-info">请输入正确的邮箱</div>
+                        </div>
+                    </div>
+                    <!--邮箱 box end-->
+
+                    <!--常驻地 box start-->
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>常驻地</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <div class="select-province">
+                                    <select name="" id="1">
+                                        <option value="123">北京</option>
+                                        <option value="234">陕西</option>
+                                        <option value="345">海南</option>
+                                    </select>
+                                </div>
+                                <div class="select-city">
+                                    <select name="" id="2" disabled>
+                                        <option value="123">西安</option>
+                                        <option value="234">重庆</option>
+                                        <option value="345">北京</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-info">请输入正确的常驻地</div>
+                        </div>
+                    </div>
+                    <!--常驻地 box end-->
+
+                    <div class="line-box clearfix">
+                        <div class="left-input-title">
+                            <span class="pos-rel"><span class="red must">*</span>真实姓名</span>
+                        </div>
+                        <div class="input-box right-input-content">
+                            <div>
+                                <textarea class="i-t-area"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--表单注册第一步 end-->
+    </div>
+
+    <!--footer start-->
+    <div class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <div class="left-logo">
+                    <div class="footer-logo">
+                        <img src="../img/index/logo2.png" alt="锦囊专家">
+                    </div>
+                    <ul class="footer-left">
+                        <li class="f-four"><a href="">首页</a></li>
+                        <li class="f-four"><a href="">下载中心</a></li>
+                        <li class="f-four"><a href="">成功案例</a></li>
+                        <li class="f-four"><a href="">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="right-phone">
+                    <dl class="f-phone">
+                        <dt>联系我们</dt>
+                        <dd class="f-mb">
+                            <i class="iconfont icon-mail"></i>
+                            <a href="mailto:JNexpert@gmail.com">JNexpert@gmail.com</a>
+                        </dd>
+                        <dd>
+                            <i class="iconfont icon-phone"></i>010-89839968
+                        </dd>
+                    </dl>
+                    <dl class="f-phone">
+                        <dt>关注我们</dt>
+                        <dd class="f-mb">
+                            <span class="f-weibo-f">新浪微博: </span><i class="iconfont icon-weibo f-weibo"></i>
+                        </dd>
+                        <dd>
+                            公众号: JNexpert
+                        </dd>
+                    </dl>
+                    <dl class="f-code">
+                        <img src="../img/index/code.png" alt="" class="jn-code">
+                    </dl>
+                </div>
+            </div>
+            <p class="version">北京捷恩旭技术咨询有限公司 Copyright © 2016 | 京ICP备15002655号</p>
+        </div>
+    </div>
+    <!--footer end-->
+</div>
+</body>
+<script>
+
+</script>
+</html>

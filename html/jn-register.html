@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v4-register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/iconfont.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/register.css">
+<body>
+<div class="app">
+    <!-- header start -->
+    <div class="header">
+        <div class="container pos-rel">
+            <div class="h-box">
+                <div class="logo">
+                    <img src="../img/index/logo.png" alt="锦囊专家">
+                </div>
+                <div class="nav">
+                    <ul class="h-nav-list">
+                        <li class="nav-li nav-active">
+                            <a>首页</a>
+                        </li>
+                        <li class="nav-li">
+                            <a>微课</a>
+                        </li>
+                        <li class="nav-li">
+                            <a>献计</a>
+                        </li>
+                        <li class="nav-li">
+                            <a class="login">登陆</a>
+                        </li>
+                        <li class="nav-li">
+                            <a>注册</a>
+                        </li>
+                        <li class="nav-li nav-li-own">
+                            <a href="" class="h-name overflow">周丹丹</a>
+                            <i class="iconfont icon-down icon-down-posi"></i>
+                            <ul class="own-list name-fadeIn">
+                                <li>
+                                    <a href="" class="transition2">我的订单</a>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">消息中心</a>
+                                    <i class="h-message-num"></i>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">我的收藏</a>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">个人设置</a>
+                                </li>
+                                <li>
+                                    <a href="" class="transition2">退出</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-li">
+                            <a>成为专家</a>
+                        </li>
+                        <li class="search">
+                            <i class="icon iconfont icon-search"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!--register box start-->
+    <div class="container">
+        <div class="mt">
+            <div class="regis-box">
+                <div class="model-content">
+                    <div class="logo-box-out">
+                        <div class="logo-box-in">
+                            <div class="model-logo">
+                                <img src="../img/login/logo3.png" alt="jnexpert">
+                            </div>
+                            <div class="model-line">
+                                <span class="fc">使用手机号注册</span>
+                            </div>
+                            <form>
+                                <div class="input-box">
+                                    <input type="text" class="input-text input-text-2 transition2" placeholder="输入手机号">
+                                    <div class="input-info input-phone">请输入正确的11位手机号码</div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="two-input">
+                                        <input type="text" class="input-text input-text-2 transition2 left-input" placeholder="手机验证码">
+                                        <div class="right-button">获取验证码</div>
+                                    </div>
+                                    <div class="input-info input-phone">请输入正确的手机验证码</div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="two-input">
+                                        <input type="text" class="input-text input-text-2 transition2 left-input" placeholder="手机验证码">
+                                        <div class="right-button right-button-disabled">获取验证码</div>
+                                    </div>
+                                    <div class="input-info input-phone">请输入正确的手机验证码</div>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" class="input-text input-text-2 transition2" placeholder="输入姓名">
+                                    <div class="input-info input-phone">请输入正确的姓名</div>
+                                </div>
+                                <div class="input-box">
+                                    <input type="password" class="input-text input-text-2 transition2" placeholder="输入密码">
+                                    <div class="input-info input-password">密码不符合规则</div>
+                                </div>
+                                <div class="input-box">
+                                    <input type="password" class="input-text input-text-2 transition2" placeholder="再次输入密码">
+                                    <div class="input-info input-password">两次密码不一致</div>
+                                </div>
+                                <div class="input-agreement">
+                                    <label class="radio-box">
+                                        <input type="checkbox" name="-1" id="radio-1-5" >
+                                        <label for="radio-1-5" class="checkbox-label"></label>
+                                        <span>已阅读并同意</span>
+                                    </label>
+                                    <a href="" class="agreement" target="_blank">《锦囊专家用户协议》</a>
+                                </div>
+                                <!--正常登陆按钮 start-->
+                                <div class="i-btn transition2">注册</div>
+                                <!--正常登陆按钮 end-->
+
+                                <!--登陆禁止点击状态 加i-btn-disabled class start-->
+                                <!--<div class="i-btn i-btn-disabled">注册</div>-->
+                                <!--登陆禁止点击状态 end -->
+
+                                <!--登陆请求时显示状态 加i-btn-disabled & i-btn-loading class start-->
+                                <!--<div class="i-btn i-btn-disabled i-btn-loading"></div>-->
+                                <!--登陆请求时显示状态 end-->
+
+                                <div class="input-down clearfix">
+                                    <div class="right-go-reg">
+                                        <span>已有账号?现在去</span>
+                                        <a href="" class="i-red">登陆</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--register box end-->
+
+    <!--footer start-->
+    <div class="footer">
+        <div class="container">
+            <div class="clearfix">
+                <div class="left-logo">
+                    <div class="footer-logo">
+                        <img src="../img/index/logo2.png" alt="锦囊专家">
+                    </div>
+                    <ul class="footer-left">
+                        <li class="f-four"><a href="">首页</a></li>
+                        <li class="f-four"><a href="">下载中心</a></li>
+                        <li class="f-four"><a href="">成功案例</a></li>
+                        <li class="f-four"><a href="">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="right-phone">
+                    <dl class="f-phone">
+                        <dt>联系我们</dt>
+                        <dd class="f-mb">
+                            <i class="iconfont icon-mail"></i>
+                            <a href="mailto:JNexpert@gmail.com">JNexpert@gmail.com</a>
+                        </dd>
+                        <dd>
+                            <i class="iconfont icon-phone"></i>010-89839968
+                        </dd>
+                    </dl>
+                    <dl class="f-phone">
+                        <dt>关注我们</dt>
+                        <dd class="f-mb">
+                            <span class="f-weibo-f">新浪微博: </span><i class="iconfont icon-weibo f-weibo"></i>
+                        </dd>
+                        <dd>
+                            公众号: JNexpert
+                        </dd>
+                    </dl>
+                    <dl class="f-code">
+                        <img src="../img/index/code.png" alt="" class="jn-code">
+                    </dl>
+                </div>
+            </div>
+            <p class="version">北京捷恩旭技术咨询有限公司 Copyright © 2016 | 京ICP备15002655号</p>
+        </div>
+    </div>
+    <!--footer end-->
+
+    <!--model login start-->
+    <div class="model fadeIn">
+        <div class="flex-box">
+            <div class="model-box model-login model-fadeIn">
+                <div class="login-box">
+                    <div class="model-title">
+                        <i class="iconfont icon-chacha model-close-i"></i>
+                    </div>
+                    <div class="model-content">
+                        <div class="logo-box-out">
+                            <div class="logo-box-in">
+                                <div class="model-logo">
+                                    <img src="../img/login/logo3.png" alt="jnexpert">
+                                </div>
+                                <div class="model-line">
+                                    <span>使用手机号登录</span>
+                                </div>
+                                <form>
+                                    <div class="input-box">
+                                        <input type="text" class="input-text transition2" placeholder="输入手机号">
+                                        <div class="input-info input-phone">请输入正确的11位手机号码</div>
+                                    </div>
+                                    <div class="input-box">
+                                        <input type="password" class="input-text" placeholder="输入密码">
+                                        <div class="input-info input-password">账号或密码错误</div>
+                                    </div>
+
+                                    <!--正常登陆按钮 start-->
+                                    <div class="i-btn transition2">登陆</div>
+                                    <!--正常登陆按钮 end-->
+
+                                    <!--登陆禁止点击状态 加i-btn-disabled class start-->
+                                    <!--<div class="i-btn i-btn-disabled">登陆</div>-->
+                                    <!--登陆禁止点击状态 end -->
+
+                                    <!--登陆请求时显示状态 加i-btn-disabled & i-btn-loading class start-->
+                                    <!--<div class="i-btn i-btn-disabled i-btn-loading"></div>-->
+                                    <!--登陆请求时显示状态 end-->
+
+                                    <div class="input-down clearfix">
+                                        <div class="left-pass">
+                                            <a href="" class="i-red">忘记密码</a>
+                                        </div>
+                                        <div class="right-go-reg">
+                                            <span>没有账号?</span>
+                                            <a href="" class="i-red">去注册</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--model login end-->
+</div>
+</body>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script>
+    $(function() {
+
+        $('.model-close-i').on('click', () => {
+            $('.model').hide();
+        });
+        $('.login').on('click', () => {
+            $('.model').css('display', 'block');
+        })
+    });
+</script>
+</html>
