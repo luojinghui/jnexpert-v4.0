@@ -42,6 +42,9 @@ body {
     top: 0px;
     left: -10px;
 }
+.none {
+    display: none;
+}
 
 .tc {
     text-align: center;
@@ -528,6 +531,9 @@ body {
     border-top-width: 0px;
     border-right-width: 0px;
     -webkit-transform: rotate(-45deg) scale(0);
+       -moz-transform: rotate(-45deg) scale(0);
+        -ms-transform: rotate(-45deg) scale(0);
+            transform: rotate(-45deg) scale(0);
     /*滚落进入*/
     /*transform: translate3d(0,-26px,0) scale(0);*/
     /*抖动进入*/
