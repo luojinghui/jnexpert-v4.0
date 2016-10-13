@@ -104,8 +104,8 @@ module.exports = function(grunt) {
           yuicompress: false
         },
         files: {
-          './css/form.css': './less/form.less'
-          // './css/test2.css': './less/style2.less'
+          // './css/form.css': './less/form.less'
+          './css/expertDetail.css': './less/expertDetail.less'
         }
       }
     },
@@ -127,7 +127,7 @@ module.exports = function(grunt) {
                 },
                 expand: true,
                 flatten: true,
-                src: './css/form.css',
+                src: './css/expertDetail.css',
                 dest: './css',
                 watch : {
                          styles : {
