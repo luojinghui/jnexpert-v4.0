@@ -14,6 +14,10 @@
     z-index: -1;
 }
 
+/*.swiper-scrollbar {*/
+/*display: none!important;*/
+/*}*/
+
 .swiper-pagination-bullet {
     background: #fff !important;
     opacity: .8 !important;
@@ -39,19 +43,19 @@
 }
 
 .slide-one {
-    background: #60bde6 url('../img/slide/1001.jpg') no-repeat center center;
+    background: #60bde6 url('../img/slide/1.jpg') no-repeat center center;
 }
 
 .slide-two {
-    background: #444967 url('../img/slide/1212.jpg') no-repeat center center;
+    background: #444967 url('../img/slide/2.jpg') no-repeat center center;
 }
 
 .slide-three {
-    background: #5bcad1 url('../img/slide/1003.jpg') no-repeat center center;
+    background: #5bcad1 url('../img/slide/3.jpg') no-repeat center center;
 }
 
 .slide-four {
-    background: #f2eeeb url('../img/slide/1004.jpg') no-repeat center center;
+    background: #f2eeeb url('../img/slide/4.jpg') no-repeat center center;
 }
 
 /* banner box end *!*/
@@ -139,7 +143,7 @@
     height: 100%;
     margin: 0;
     -moz-box-sizing: border-box;
-         box-sizing: border-box;
+    box-sizing: border-box;
     padding-top: 10px;
 }
 
@@ -213,7 +217,7 @@
     overflow: hidden;
     margin: 0 auto;
     -moz-box-sizing: border-box;
-         box-sizing: border-box;
+    box-sizing: border-box;
 }
 .e-img {
     width: 230px;
@@ -236,8 +240,8 @@
 .e-desc {
     background: rgb(0, 188, 212);
     -webkit-transform: rotateY(-180deg);
-       -moz-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
     z-index: 1;
 }
 
@@ -278,10 +282,10 @@
 .animated {
     -webkit-animation-duration: 1s;
     -moz-animation-duration: 1s;
-         animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
-         animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .e-img img {
@@ -302,23 +306,6 @@
 }
 .e-next {
 
-}
-.e-star {
-    background: url('../img/index/star.png')no-repeat center center;
-    display: inline-block;
-    color: #fff;
-    font-weight: 400;
-    font-size: 12px;
-    width: 80px;
-    height: 19px;
-    background-size: 100%;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-    padding: 3px 0 0 4px;
-    vertical-align: text-top;
-}
-.i-star {
-    font-size: 12px;
 }
 .e-title {
     color: #1e1a16;
