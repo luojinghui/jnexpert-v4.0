@@ -59,3 +59,4 @@ a:focus{outline:none}
 }
 * {  -webkit-box-sizing: border-box;  -moz-box-sizing: border-box;  box-sizing: border-box;  }
 .inline {  display: inline-block;  zoom: 1;  *display: inline;  }
+li {list-style: none}
