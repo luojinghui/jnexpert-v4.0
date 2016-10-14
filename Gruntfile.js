@@ -105,7 +105,7 @@ module.exports = function(grunt) {
         },
         files: {
           // './css/form.css': './less/form.less'
-          './css/expertDetail.css': './less/expertDetail.less'
+          './css/expertCenter.css': './less/expertCenter.less'
         }
       }
     },
@@ -127,7 +127,7 @@ module.exports = function(grunt) {
                 },
                 expand: true,
                 flatten: true,
-                src: './css/expertDetail.css',
+                src: './css/expertCenter.css',
                 dest: './css',
                 watch : {
                          styles : {
