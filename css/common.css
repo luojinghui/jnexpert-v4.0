@@ -16,7 +16,6 @@ body {
     margin: 0;
     color: #2c3035;
     font-size: 14px;
-    font-family: "Microsoft Yahei", Helvetica, STHeiTi, sans-serif;
     background-color: #ffffff;
 }
 
@@ -468,7 +467,7 @@ body {
 }
 
 .f-phone {
-    margin-right: 45px;
+    margin-right: 40px;
 }
 
 .f-code {
