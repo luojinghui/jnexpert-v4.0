@@ -67,9 +67,13 @@
   cursor: pointer;
   margin-left: 15px;
 }
+.e-rr-title span:hover {
+  text-decoration: underline;
+}
 .e-rr-title .on {
   color: #f65131;
   cursor: default!important;
+  text-decoration: none!important;
 }
 .e-r-box {
   margin: 45px 0px 0px 0px;
