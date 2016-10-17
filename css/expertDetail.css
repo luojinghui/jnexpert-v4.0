@@ -75,11 +75,6 @@ h2 {
 .expert-info .expert-intro {
   min-height: 100px;
   margin-left: 30px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-     -moz-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 .expert-see {
   background-color: #0190dc;
