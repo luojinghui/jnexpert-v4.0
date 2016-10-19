@@ -79,6 +79,7 @@
 
 .e-r-box {
   .mt(45);
+  padding-bottom: 50px;
 }
 .max-left {
   display: block;
@@ -166,6 +167,8 @@
 
 .max-code {
   .input(250px, 46px);
+  float: left;
+  margin-right: 4px;
 }
 .max-code-btn {
   .i-btn(163px, 4px);
@@ -180,19 +183,26 @@
 .save-disabled {
   .disabled(130px, 66px)
 }
-.select-province, .select-city {
-  .select(206px, 46px)
+.select-province2, .select-city2 {
+  .select(207px, 46px);
+  select {
+    background-color: #fff!important;
+  }
+}
+.select-province2 {
+  margin-right: 0px;
 }
 
 
 //select start
-.select(@width: 502px, @height: 38px) {
+.select(@width: 502px, @height: 38px, @color: #fff) {
   display: inline-block;
-  width: @width;
-  height: @height;
+  width: @width!important;
+  height: @height!important;
   box-sizing: border-box;
   position: relative;
   display: inline-block;
+  background-color: @color!important;
   &:after {
     content: "\e614";
     font-family: "iconfont" !important;
